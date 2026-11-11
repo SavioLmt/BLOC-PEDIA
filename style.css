@@ -1,27 +1,35 @@
+/*MAIN*/
 *{
 		margin: 0px;
 		padding: 0px;
 		font-family: Avenir, sans-serif;
-		background-color: grey;
-}
-.nom a {
-	text-align: left;
-    text-decoration: none;
-    color: black;
+		background-color: #212529;
 }
 
-.nom a:hover {
-    color: red;
+html{
+    scroll-behavior: smooth;
 }
+
 h1{
 		text-align: center;
 		margin: 20px 0px;
 }
 
+
+.nom a {
+	text-align: left;
+    text-decoration: none;
+    color: #FB5607;
+}
+
+.nom a:hover {
+    color: #8338EC;
+}
+
+/*NAVIGATION*/ 
 nav{
 		width: 100%;
-		/* margin: 0 auto; */
-		background-color: white;
+		background-color: #E9ECEF;
 		position: sticky;
 		top: 0px;
 }
@@ -46,28 +54,29 @@ nav ul::after{
 nav a{
 		display: block;
 		text-decoration: none;
-		color: black;
+		color: #8338EC;
 		border-bottom: 2px solid transparent;
 		padding: 10px 0px;
 }
 
 nav a:hover{
-		color: orange;
-		border-bottom: 2px solid gold;
+		color: #E9ECEF;
+		border-bottom: 2px solid #FB5607;
 }
 
+
+nav ul li:hover .sous{
+		display: block;
+}
+
+/*SOUS-MENUS*/
 .sous{
 		display: none;
-		box-shadow: 0px 1px 2px #CCC;
-		background-color: white;
+		box-shadow: 0px 1px 2px #FB5607;
 		position: absolute;
 		width: 100%;
 		z-index: 1000;
 		text-align: center;
-}
-
-nav ul li:hover .sous{
-		display: block;
 }
 
 .sous li{
@@ -82,9 +91,11 @@ nav ul li:hover .sous{
 }
 .sous a:hover{
 		border-bottom: none;
-		background-color: RGBa(200,200,200,0.1);
+		background-color: #FB5607;
 }
 
+
+/*AUTRES*/
 .deroulant > a::after{
 		content:" ▼";
 		font-size: 12px;
@@ -99,4 +110,8 @@ nav ul li:hover .sous{
 		float: right;
 		width: 25%;
 		text-align: center;
+}
+
+.equipement{
+	color: #8338EC;
 }
