@@ -120,7 +120,6 @@ nav ul li:hover .sous{
 }
 
 /* EQUIPEMENTS*/
-
 .equipements {
     width: 100%;
 }
@@ -152,7 +151,6 @@ nav ul li:hover .sous{
 /*AUTRES*/
 .deroulant > a::after{
 		content:" ▼";
-		font-size: 12px;
 }
 
 .conteneur{
@@ -184,21 +182,30 @@ nav ul li:hover .sous{
 	}
 
 .topic {
-	 padding: 30px; background: var(--gris_clair); border: 1px solid var(--gris_béton); border-radius: 8px; box-shadow: var(--shadow);
+	 padding: 30px; 
+	 background: var(--gris_clair); 
+	 border: 2px solid var(--gris_béton); 
+	 border-radius: 8px; 
+	 box-shadow: var(--shadow);
 	}
+	
 .topic h2 {
-	font-size: 2rem; 
+	font-size: 30px;
+	font-family: Georgia, 'Times New Roman', serif;
+	background: var(--gris_clair);
 }
-.topic ul {
-	padding-left: 20px; 
-}
+
+
 
 /*GRADE TABLE*/
 .grade-table { 
-	width: 100%; border-collapse: collapse; margin-top: 20px; background: var(--gris_clair);
+	width: 100%; border-collapse: collapse; 
+	margin-top: 20px;
+	background: var(--gris_clair);
 }
 .grade-table th, .grade-table td {
-	padding: 14px; text-align: left; 
+	padding: 14px; 
+	text-align: left; 
 	border-bottom: 1px solid var(--gris_béton);
 }
 .grade-table th {
@@ -217,9 +224,5 @@ nav ul li:hover .sous{
 	font-family: Georgia, 'Times New Roman', serif; 
 	font-size: 70px; 
 }
-.page-intro p {
-	max-width: 680px; 
-	margin-bottom: 0; 
-	font-size: 1.14rem; 
-}
+
 
