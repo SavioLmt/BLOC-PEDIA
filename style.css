@@ -148,14 +148,60 @@ nav ul li:hover .sous{
     height: 100%;
 }
 
+/*TOPIC*/
+.topic-grid {
+	 display: grid;
+	 grid-template-columns: repeat(2, 1fr);
+	 gap: 24px;
+	}
+
+.topic {
+	 padding: 30px;
+	 background: var(--gris_clair);
+	 border: 2px solid var(--gris_béton);
+	 border-radius: 8px;
+	}
+	
+.topic h2 {
+	font-size: 30px;
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+.topic-grid :hover {
+	box-shadow: 0px 0px 20px var(--rouge_orange);
+}
+
+/*GRADE TABLE*/
+.grade-table { 
+	width: 100%; border-collapse: collapse;
+	margin-top: 20px;
+	background: var(--gris_clair);
+}
+.grade-table th, .grade-table td {
+	padding: 14px;
+	text-align: left;
+	border-bottom: 1px solid var(--gris_béton);
+}
+.grade-table th {
+	background: var(--noir_profond);
+	color: var(--blanc_casse);
+}
+
+/*PAGE INTRO*/
+.page-intro {
+	padding: 72px 0 42px;
+	text-align: center;
+	align-items: center;
+}
+.page-intro h1 {
+	margin: 0;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 70px;
+}
+
 /*AUTRES*/
 .deroulant > a::after{
 		content:" ▼";
-}
-
-.conteneur{
-	margin: 50px 20px;
-	height: 1500px;
 }
 
 .à_propos{
@@ -174,55 +220,9 @@ nav ul li:hover .sous{
 	padding-bottom: 80px;
 }
 
-/*TOPIC*/
-.topic-grid {
-	 display: grid; 
-	 grid-template-columns: repeat(2, 1fr); 
-	 gap: 24px; 
-	}
-
-.topic {
-	 padding: 30px; 
-	 background: var(--gris_clair); 
-	 border: 2px solid var(--gris_béton); 
-	 border-radius: 8px; 
-	 box-shadow: var(--shadow);
+@media screen and (max-width: 780px) {
+	.topic-grid {
+		grid-template-columns: 1fr;
 	}
 	
-.topic h2 {
-	font-size: 30px;
-	font-family: Georgia, 'Times New Roman', serif;
-	background: var(--gris_clair);
 }
-
-
-
-/*GRADE TABLE*/
-.grade-table { 
-	width: 100%; border-collapse: collapse; 
-	margin-top: 20px;
-	background: var(--gris_clair);
-}
-.grade-table th, .grade-table td {
-	padding: 14px; 
-	text-align: left; 
-	border-bottom: 1px solid var(--gris_béton);
-}
-.grade-table th {
-	background: var(--noir_profond); 
-	color: var(--blanc_casse); 
-}
-
-/*PAGE INTRO*/
-.page-intro { 
-	padding: 72px 0 42px;
-	text-align: center;
-	align-items: center;
-}
-.page-intro h1 { 
-	margin: 0; 
-	font-family: Georgia, 'Times New Roman', serif; 
-	font-size: 70px; 
-}
-
-
