@@ -1,0 +1,556 @@
+/* ========================================
+   1. VARIABLES
+======================================== */
+
+:root {
+    --bleu-petrol: #0E2931;
+    --vert-canard: #12484C;
+    --turquoise: #2B7574;
+    --rouge-bordeaux: #861211;
+    --gris-perle: #E2E2E0;
+    --shadow: 0 16px 38px rgba(25, 31, 35, .12);
+}
+
+
+/* ========================================
+   2. RÈGLES GÉNÉRALES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--bleu-petrol);
+    background: var(--gris-perle);
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+
+/* ========================================
+   3. EN-TÊTE ET NAVIGATION
+======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    color: var(--gris-perle);
+    background: var(--bleu-petrol);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, .18);
+}
+
+.header-inner {
+    width: min(1180px, calc(100% - 48px));
+    min-height: 74px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    color: var(--gris-perle);
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: .07em;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--turquoise);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--gris-perle);
+    background: transparent;
+    border: 1px solid var(--gris-perle);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font: inherit;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.nav a {
+    display: block;
+    padding: 25px 14px;
+    color: var(--gris-perle);
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: bold;
+    transition: background .3s ease;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+    color: white;
+    background: var(--turquoise);
+}
+
+
+/* ========================================
+   4. PAGE D'ACCUEIL
+======================================== */
+
+.hero {
+    min-height: 610px;
+    color: white;
+    background: url('image/fond mur_bloc.jpg') center 44% / cover;
+    display: grid;
+    align-items: center;
+}
+
+.hero-content {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+    padding: 80px 0;
+}
+
+.en-tete {
+    margin: 0 0 12px;
+    color: var(--turquoise);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.hero .en-tete {
+    color: var(--gris-perle);
+}
+
+.hero h1 {
+    max-width: 700px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(3rem, 7vw, 6.3rem);
+    letter-spacing: -.055em;
+}
+
+.hero p:not(.en-tete) {
+    max-width: 600px;
+    font-size: 1.18rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 13px 21px;
+    border: 2px solid var(--turquoise);
+    background: var(--turquoise);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    transition: .2s ease;
+}
+
+.button:hover {
+    background: transparent;
+    transform: translateY(-2px);
+}
+
+.button.alt {
+    background: transparent;
+    color: var(--vert-canard);
+    border-color: var(--vert-canard);
+}
+
+.button.alt:hover {
+    background: var(--vert-canard);
+    color: white;
+}
+
+.intro-grid {
+    width: min(1180px, calc(100% - 48px));
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-grid h2, .section-heading h2, .content h2 {
+    margin: 0 0 20px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    letter-spacing: -.04em;
+}
+
+.image-frame {
+    min-height: 390px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-section {
+    padding: 76px 0;
+    background: #d5d9d7;
+}
+
+.section-heading {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.section-heading p {
+    max-width: 500px;
+    margin: 0 0 8px;
+}
+
+.cards {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    min-height: 240px;
+    padding: 28px;
+    background: var(--gris-perle);
+    border-top: 5px solid var(--turquoise);
+    box-shadow: 0 8px 20px rgba(31, 35, 36, .07);
+}
+
+.card-number {
+    color: var(--rouge-bordeaux);
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.card h3 {
+    margin: 30px 0 10px;
+    color: var(--vert-canard);
+    font-size: 1.35rem;
+}
+
+.card p {
+    margin: 0;
+}
+
+
+/* ========================================
+   5. PAGES SECONDAIRES
+======================================== */
+
+.page-intro,
+.content {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+}
+
+.page-intro {
+    padding: 72px 0 42px;
+    text-align: center;
+}
+
+.page-intro h1 {
+    margin: 0;
+    color: var(--bleu-petrol);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    letter-spacing: -.055em;
+}
+
+.content {
+    padding-bottom: 80px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    align-items: start;
+    margin: 30px 0 70px;
+}
+
+.split-media {
+    min-height: 420px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.split-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-text {
+    padding: 12px 0;
+}
+
+.split-text h2 {
+    color: var(--vert-canard);
+    font-size: 2.5rem;
+}
+
+.notice {
+    padding: 22px 24px;
+    border-left: 5px solid var(--rouge-bordeaux);
+    background: #d5d9d7;
+}
+
+
+/* ========================================
+   6. ÉQUIPEMENTS
+======================================== */
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.equipment-card {
+    overflow: hidden;
+    background: var(--gris-perle);
+    border: 1px solid rgba(18, 72, 76, .2);
+    box-shadow: var(--shadow);
+}
+
+.equipment-card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+.equipment-card div {
+    padding: 22px;
+}
+
+.equipment-card h2 {
+    margin: 0 0 10px;
+    color: var(--vert-canard);
+    font-size: 1.85rem;
+}
+
+.equipment-card p {
+    margin: 0;
+}
+
+
+/* ========================================
+   7. topic
+======================================== */
+
+.tech-grille {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 70px;
+}
+
+.tech {
+    padding: 30px;
+    background: var(--gris-perle);
+    border: 2px solid var(--vert-canard);
+    border-radius: 8px;
+    transition: box-shadow .3s ease;
+}
+
+.tech h2 {
+    margin: 0 0 20px;
+    color: var(--vert-canard);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.tech:hover {
+    box-shadow: 0 0 50px var(--vert-canard)
+}
+
+.tech ul {
+    padding-left: 20px;
+}
+
+
+/* ========================================
+   8. TABLEAU DES COTATIONS
+======================================== */
+
+.graduations {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: var(--gris-perle);
+}
+
+.graduations th,
+.graduations td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--turquoise);
+}
+
+.graduations th {
+    background: var(--bleu-petrol);
+    color: var(--gris-perle);
+}
+
+.cotations h2 {
+    color: var(--vert-canard);
+}
+
+
+/* ========================================
+   9. LIENS EXTERNES ET SÉCURITÉ
+======================================== */
+
+.external-list {
+    display: grid;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+}
+
+.external-list a {
+    display: block;
+    padding: 24px;
+    border: 1px solid var(--vert-canard);
+    background: var(--gris-perle);
+    color: var(--vert-canard);
+    text-decoration: none;
+    font-weight: 800;
+    transition: .2s ease;
+}
+
+.external-list a:hover {
+    color: white;
+    background: var(--turquoise);
+}
+
+.checklist {
+    columns: 2;
+    padding-left: 20px;
+}
+
+.security-section h2 {
+    color: var(--vert-canard);
+}
+
+
+/* ========================================
+   10. PIED DE PAGE
+======================================== */
+
+.footer {
+    color: var(--gris-perle);
+    background: var(--bleu-petrol);
+}
+
+.footer-interieur {
+    width: 1200px;;
+    min-height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-img {
+    width: 100px;
+
+}
+
+
+/* ========================================
+   11. RESPONSIVE : TABLETTES ET MOBILES
+======================================== */
+
+@media screen and (max-width: 780px) {
+    .header-inner {
+        width:35px;
+        min-height: 65px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+    }
+
+    .nav.open {
+        display: block;
+    }
+
+    .nav ul {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .nav a {
+        padding: 11px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-content, .page-intro, .content, .footer-inner, .intro-grid, .section-heading, .cards {
+        width: 1200px;
+    }
+
+    .intro-grid, .split, .equipment-grid, .tech-grille, .cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .intro-grid {
+        margin: 54px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .checklist {
+        columns: 1;
+    }
+
+}
