@@ -1,13 +1,11 @@
-### **Menu Déroulants** 
+
+    --bleu-petrol: #0E2931;
+    --vert-canard: #12484C;
+    --turquoise: #2B7574;
+    --rouge-bordeaux: #861211;
+    --gris-perle: #E2E2E0;
 
 
-Noir profond	rgb(23, 23, 23)
-Gris béton	#777777
-Gris clair	#D9D9D9
-Blanc cassé	#F4F4F0
-Rouge orangé	#E4572E
-
-Typographies : Oswald + Inter.
 
 
 
