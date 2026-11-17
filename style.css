@@ -1,6 +1,3 @@
-/* ========================================
-   1. VARIABLES
-======================================== */
 
 :root {
     --bleu-petrol: #0E2931;
@@ -11,10 +8,8 @@
     --shadow: 0 16px 38px rgba(25, 31, 35, .12);
 }
 
+/* RÈGLES GÉNÉRALES */
 
-/* ========================================
-   2. RÈGLES GÉNÉRALES
-======================================== */
 body {
     margin: 0;
     color: var(--bleu-petrol);
@@ -22,20 +17,18 @@ body {
     font: 16px Arial, Helvetica, sans-serif;
 }
 
-/* ========================================
-   3. EN-TÊTE ET NAVIGATION
-======================================== */
+/* EN-TÊTE ET NAVIGATION */
 
 .header {
-    background: var(--bleu-petrol);
     position: sticky;
     top: 0;
+    background: var(--bleu-petrol);
 }
 
 .header-in {
     max-width: 1200px;
-    margin-inline: auto;
     min-height: 75px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +37,7 @@ body {
 .brand {
     color: var(--gris-perle);
     text-decoration: none;
-    font-size: 1.35rem;
+    font-size: 21.6px;
     font-weight: 900;
     white-space: nowrap;
 }
@@ -55,18 +48,18 @@ body {
 
 .menu-toggle {
     display: none;
-    color: var(--gris-perle);
-    background: transparent;
+    padding: 8px 12px;
     border: 1px solid var(--gris-perle);
     border-radius: 6px;
-    padding: 8px 12px;
+    color: var(--gris-perle);
+    background: transparent;
     font: inherit;
 }
 
 .nav ul {
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
     list-style: none;
 }
 
@@ -75,7 +68,7 @@ body {
     padding: 25px 14px;
     color: var(--gris-perle);
     text-decoration: none;
-    font-size: .88rem;
+    font-size: 14.08px;
     font-weight: bold;
     transition: background .3s ease;
 }
@@ -86,22 +79,18 @@ body {
     background: var(--turquoise);
 }
 
-
-/* ========================================
-   4. PAGE D'ACCUEIL
-======================================== */
+/* PAGE D'ACCUEIL */
 
 .hero {
     min-height: 610px;
-    color: white;
-    background: url('image/fond mur_bloc.jpg') center 44% / cover;
     display: grid;
     align-items: center;
+    color: white;
+    background: url('image/fond mur_bloc.jpg') center 44% / cover;
 }
 
 .hero-content {
     max-width: 1200px;
-    margin-inline: auto;
     margin: auto;
     padding: 80px 0;
 }
@@ -109,7 +98,7 @@ body {
 .en-tete {
     margin: 0 0 12px;
     color: var(--turquoise);
-    font-size: .8rem;
+    font-size: 12.8px;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -122,18 +111,18 @@ body {
     max-width: 700px;
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(3rem, 7vw, 6.3rem);
+    font-size: clamp(48px, 7vw, 100.8px);
 }
 
 .button {
     display: inline-block;
     padding: 20px;
     border: 2px solid var(--turquoise);
-    background: var(--turquoise);
     color: var(--gris-perle);
-    text-decoration: none ;
+    background: var(--turquoise);
+    text-decoration: none;
     font-weight: 800;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .button:hover {
@@ -142,33 +131,34 @@ body {
 }
 
 .button.alt {
-    background: transparent;
     color: var(--vert-canard);
+    background: transparent;
     border-color: var(--vert-canard);
 }
 
 .button.alt:hover {
-    background: var(--vert-canard);
     color: var(--gris-perle);
+    background: var(--vert-canard);
 }
 
 .intro-grid {
     max-width: 1200px;
     margin: 80px auto;
     display: grid;
-    grid-template-columns:auto auto;
+    grid-template-columns: auto auto;
     align-items: center;
 }
 
-.intro-grid h2, .section-heading h2, .content h2 {
+.intro-grid h2,
+.section-heading h2,
+.content h2 {
     margin: 0 0 20px;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-size: clamp(33.6px, 4vw, 56px);
 }
 
 .section-heading {
     max-width: 1200px;
-    margin-inline: auto;
     margin: 0 auto 30px;
     display: flex;
     align-items: end;
@@ -178,7 +168,6 @@ body {
 
 .cards {
     max-width: 1200px;
-    margin-inline: auto;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -188,8 +177,8 @@ body {
 .card {
     min-height: 240px;
     padding: 28px;
-    background: var(--gris-perle);
     border-top: 5px solid var(--turquoise);
+    background: var(--gris-perle);
     box-shadow: 0 8px 20px rgba(31, 35, 36, .07);
 }
 
@@ -201,21 +190,18 @@ body {
 .card h3 {
     margin: 30px 0 10px;
     color: var(--vert-canard);
-    font-size: 1.35rem;
+    font-size: 21.6px;
 }
 
 .card p {
     margin: 0;
 }
 
+/* PAGES SECONDAIRES */
 
-/* ========================================
-   5. PAGES SECONDAIRES
-======================================== */
-
-.page-intro, .content {
+.page-intro,
+.content {
     max-width: 1200px;
-    margin-inline: auto;
     margin: auto;
 }
 
@@ -228,7 +214,7 @@ body {
     margin: 0;
     color: var(--bleu-petrol);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(48px, 7vw, 88px);
 }
 
 .content {
@@ -261,7 +247,7 @@ body {
 
 .split-text h2 {
     color: var(--vert-canard);
-    font-size: 2.5rem;
+    font-size: 40px;
 }
 
 .notice {
@@ -270,10 +256,7 @@ body {
     background: #d5d9d7;
 }
 
-
-/* ========================================
-   6. ÉQUIPEMENTS
-======================================== */
+/* ÉQUIPEMENTS */
 
 .equipment-grid {
     display: grid;
@@ -283,8 +266,8 @@ body {
 
 .equipment-card {
     overflow: hidden;
-    background: var(--gris-perle);
     border: 1px solid rgba(18, 72, 76, .2);
+    background: var(--gris-perle);
     box-shadow: var(--shadow);
 }
 
@@ -301,17 +284,14 @@ body {
 .equipment-card h2 {
     margin: 0 0 10px;
     color: var(--vert-canard);
-    font-size: 1.85rem;
+    font-size: 29.6px;
 }
 
 .equipment-card p {
     margin: 0;
 }
 
-
-/* ========================================
-   7. topic
-======================================== */
+/* TECHNIQUES */
 
 .tech-grid {
     display: grid;
@@ -322,9 +302,9 @@ body {
 
 .tech {
     padding: 30px;
-    background: var(--gris-perle);
     border: 2px solid var(--vert-canard);
     border-radius: 8px;
+    background: var(--gris-perle);
     transition: box-shadow .3s ease;
 }
 
@@ -336,17 +316,14 @@ body {
 }
 
 .tech:hover {
-    box-shadow: 0 0 50px var(--vert-canard)
+    box-shadow: 0 0 50px var(--vert-canard);
 }
 
 .tech ul {
     padding-left: 20px;
 }
 
-
-/* ========================================
-   8. TABLEAU DES COTATIONS
-======================================== */
+/* TABLEAU DES COTATIONS */
 
 .graduations {
     width: 100%;
@@ -358,23 +335,21 @@ body {
 .graduations th,
 .graduations td {
     padding: 14px;
-    text-align: left;
     border-bottom: 1px solid var(--turquoise);
+    text-align: left;
 }
 
 .graduations th {
-    background: var(--bleu-petrol);
     color: var(--gris-perle);
+    background: var(--bleu-petrol);
 }
 
-.cotations h2 {
+.cotations h2,
+.security-section h2 {
     color: var(--vert-canard);
 }
 
-
-/* ========================================
-   9. LIENS EXTERNES ET SÉCURITÉ
-======================================== */
+/* LIENS EXTERNES ET SÉCURITÉ */
 
 .externe-list {
     display: grid;
@@ -387,8 +362,8 @@ body {
     display: block;
     padding: 24px;
     border: 1px solid var(--vert-canard);
-    background: var(--gris-perle);
     color: var(--vert-canard);
+    background: var(--gris-perle);
     text-decoration: none;
     font-weight: 800;
     transition: .2s ease;
@@ -404,14 +379,7 @@ body {
     padding-left: 20px;
 }
 
-.security-section h2 {
-    color: var(--vert-canard);
-}
-
-
-/* ========================================
-   10. PIED DE PAGE
-======================================== */
+/* PIED DE PAGE */
 
 .footer {
     color: var(--gris-perle);
@@ -419,27 +387,23 @@ body {
 }
 
 .footer-in {
-    width: 1200px;;
+    width: 1200px;
     min-height: 90px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .footer-img {
     width: 100px;
-
 }
 
-
-/* ========================================
-   11. RESPONSIVE : TABLETTES ET MOBILES
-======================================== */
+/* RESPONSIVE */
 
 @media screen and (max-width: 780px) {
     .header-in {
-        width:35px;
+        width: 35px;
         min-height: 65px;
         flex-wrap: wrap;
         padding: 0;
@@ -471,11 +435,21 @@ body {
         min-height: 560px;
     }
 
-    .hero-content, .page-intro, .content, .footer-inner, .intro-grid, .section-heading, .cards {
+    .hero-content,
+    .page-intro,
+    .content,
+    .footer-inner,
+    .intro-grid,
+    .section-heading,
+    .cards {
         width: 1200px;
     }
 
-    .intro-grid, .split, .equipment-grid, .tech-grid, .cards {
+    .intro-grid,
+    .split,
+    .equipment-grid,
+    .tech-grid,
+    .cards {
         grid-template-columns: 1fr;
         gap: 22px;
     }
@@ -491,5 +465,4 @@ body {
     .checklist {
         columns: 1;
     }
-
 }
