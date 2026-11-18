@@ -25,3 +25,9 @@ https://www.w3schools.com/cssref/func_clamp.php
 
 grid-template-columns:
 https://www.w3schools.com/cssref/pr_grid-template-columns.php
+
+
+aria-current="page"
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current
+
+

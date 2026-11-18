@@ -5,11 +5,10 @@
     --turquoise: #2B7574;
     --rouge-bordeaux: #861211;
     --gris-perle: #E2E2E0;
-    --shadow: 0 16px 38px rgba(25, 31, 35, .12);
+    --shadow: #191F23;
 }
 
 /* RÈGLES GÉNÉRALES */
-
 body {
     margin: 0;
     color: var(--bleu-petrol);
@@ -18,7 +17,6 @@ body {
 }
 
 /* EN-TÊTE ET NAVIGATION */
-
 .header {
     position: sticky;
     top: 0;
@@ -37,20 +35,16 @@ body {
 .brand {
     color: var(--gris-perle);
     text-decoration: none;
-    font-size: 21.6px;
+    font-size: 20px;
     font-weight: 900;
     white-space: nowrap;
-}
-
-.brand span {
-    color: var(--turquoise);
 }
 
 .menu-toggle {
     display: none;
     padding: 8px 12px;
     border: 1px solid var(--gris-perle);
-    border-radius: 6px;
+    border-radius: 5px;
     color: var(--gris-perle);
     background: transparent;
     font: inherit;
@@ -58,60 +52,43 @@ body {
 
 .nav ul {
     display: flex;
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
 .nav a {
     display: block;
-    padding: 25px 14px;
+    padding: 25px 15px;
     color: var(--gris-perle);
     text-decoration: none;
-    font-size: 14.08px;
-    font-weight: bold;
-    transition: background .3s ease;
 }
 
-.nav a:hover,
-.nav a[aria-current="page"] {
-    color: white;
+.nav a:hover, .nav a[aria-current="page"] {
     background: var(--turquoise);
 }
 
-/* PAGE D'ACCUEIL */
-
+/*PAGE D'ACCUEIL*/
 .hero {
-    min-height: 610px;
-    display: grid;
-    align-items: center;
+    min-height: 600px;
     color: white;
-    background: url('image/fond mur_bloc.jpg') center 44% / cover;
+    background: url('image/fond mur_bloc.jpg') center 45% / cover;
 }
 
 .hero-content {
     max-width: 1200px;
     margin: auto;
-    padding: 80px 0;
+    padding: 80px;
 }
 
 .en-tete {
-    margin: 0 0 12px;
     color: var(--turquoise);
-    font-size: 12.8px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
+    font-weight: 1000;
 
-.hero .en-tete {
-    color: var(--gris-perle);
 }
 
 .hero h1 {
     max-width: 700px;
-    margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(48px, 7vw, 100.8px);
+    font-size: clamp(50px, 5vw, 100px);
 }
 
 .button {
@@ -127,7 +104,6 @@ body {
 
 .button:hover {
     background: transparent;
-    transform: translateY(-2px);
 }
 
 .button.alt {
@@ -149,12 +125,10 @@ body {
     align-items: center;
 }
 
-.intro-grid h2,
-.section-heading h2,
-.content h2 {
-    margin: 0 0 20px;
+.intro-grid h2, .section-heading h2, .content h2 {
+    margin: 20px;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(33.6px, 4vw, 56px);
+    font-size: clamp(30px, 5vw, 50px);
 }
 
 .section-heading {
@@ -163,7 +137,6 @@ body {
     display: flex;
     align-items: end;
     justify-content: space-between;
-    gap: 24px;
 }
 
 .cards {
@@ -175,26 +148,16 @@ body {
 }
 
 .card {
-    min-height: 240px;
-    padding: 28px;
+    min-height: 250px;
+    padding: 30px;
     border-top: 5px solid var(--turquoise);
     background: var(--gris-perle);
-    box-shadow: 0 8px 20px rgba(31, 35, 36, .07);
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .card-number {
     color: var(--rouge-bordeaux);
     font-weight: 900;
-}
-
-.card h3 {
-    margin: 30px 0 10px;
-    color: var(--vert-canard);
-    font-size: 21.6px;
-}
-
-.card p {
-    margin: 0;
 }
 
 /* PAGES SECONDAIRES */
@@ -266,7 +229,6 @@ body {
 
 .equipment-card {
     overflow: hidden;
-    border: 1px solid rgba(18, 72, 76, .2);
     background: var(--gris-perle);
     box-shadow: var(--shadow);
 }
