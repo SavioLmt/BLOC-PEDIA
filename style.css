@@ -1,3 +1,4 @@
+
 /*VARIABLES*/
 :root {
     --bleu-petrol: #0E2931;
@@ -24,6 +25,7 @@ body {
 }
 
 .header-in {
+    width: 90%;
     max-width: 1200px;
     min-height: 75px;
     margin: auto;
@@ -36,7 +38,7 @@ body {
     color: var(--gris-perle);
     text-decoration: none;
     font-size: 20px;
-    font-weight: 900px;
+    font-weight: 900;
     white-space: nowrap;
 }
 
@@ -71,26 +73,26 @@ body {
 }
 
 .hero-content {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
-    padding: 80px;
+    padding: clamp(25px, 6vw, 80px) 0;
 }
 
 .en-tete {
     color: var(--turquoise);
-    font-weight: 1000px;
-
+    font-weight: 900;
 }
 
 .hero h1 {
     max-width: 700px;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(50px, 5vw, 90px);
+    font-size: clamp(30px, 5vw, 90px);
 }
 
 .hero p {
-    font-size: 20px;
-    height: 50px;
+    font-size: clamp(15px, 2vw, 20px);
+    height: auto;
     display: inline-block;
 }
 
@@ -120,20 +122,22 @@ body {
 }
 
 .intro-grid {
+    width: 90%;
     max-width: 1200px;
     margin: 80px auto;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
 }
 
 .intro-grid h2, .section-heading h2, .content h2 {
     margin: 20px;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(30px, 5vw, 50px);
+    font-size: clamp(25px, 4vw, 50px);
 }
 
 .section-heading {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto 30px;
     display: flex;
@@ -142,10 +146,11 @@ body {
 }
 
 .cards {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -159,17 +164,18 @@ body {
 
 .card-number {
     color: var(--rouge-bordeaux);
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 /*PAGES SECONDAIRES*/
 .page-intro, .content {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
 .page-intro {
-    padding: 72px 0 42px;
+    padding: clamp(35px, 6vw, 72px) 0 42px;
     text-align: center;
 }
 
@@ -177,7 +183,7 @@ body {
     margin: 0;
     color: var(--bleu-petrol);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(50px, 7vw, 100px);
+    font-size: clamp(30px, 7vw, 100px);
 }
 
 .content {
@@ -186,8 +192,8 @@ body {
 
 .split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
     align-items: start;
     margin: 30px 0 70px;
 }
@@ -210,7 +216,7 @@ body {
 
 .split-text h2 {
     color: var(--vert-canard);
-    font-size: 40px;
+    font-size: clamp(25px, 3vw, 40px);
 }
 
 .notice {
@@ -222,7 +228,7 @@ body {
 /*ÉQUIPEMENTS*/
 .equipment-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px;
 }
 
@@ -234,7 +240,7 @@ body {
 
 .equipment-card img {
     width: 100%;
-    height: 300px;
+    height: clamp(180px, 25vw, 300px);
     object-fit: cover;
 }
 
@@ -245,7 +251,7 @@ body {
 .equipment-card h2 {
     margin: 0 0 10px;
     color: var(--vert-canard);
-    font-size: 30px;
+    font-size: clamp(22px, 3vw, 30px);
 }
 
 .equipment-card p {
@@ -255,7 +261,7 @@ body {
 /*TECHNIQUES*/
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
     margin-bottom: 70px;
 }
@@ -272,7 +278,7 @@ body {
     margin: 0 0 20px;
     color: var(--vert-canard);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 30px;
+    font-size: clamp(22px, 3vw, 30px);
 }
 
 .tech:hover {
@@ -323,7 +329,7 @@ body {
     color: var(--vert-canard);
     background: var(--gris-perle);
     text-decoration: none;
-    font-weight: 800px;
+    font-weight: 800;
     transition: .2s ease;
 }
 
@@ -344,7 +350,8 @@ body {
 }
 
 .footer-in {
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     min-height: 90px;
     margin: auto;
     display: flex;
@@ -354,12 +361,13 @@ body {
 
 .footer-img {
     width: 100px;
+    max-width: 100%;
 }
 
 /*RESPONSIVE*/
 @media screen and (max-width: 780px) {
     .header-in {
-        width: 35px;
+        width: 90%;
         min-height: 65px;
         flex-wrap: wrap;
         padding: 0;
@@ -392,16 +400,16 @@ body {
     }
 
     .hero-content, .page-intro, .content, .footer-inner, .intro-grid, .section-heading, .cards {
-        width: 1200px;
+        width: 90%;
     }
 
     .intro-grid, .split, .equipment-grid, .tech-grid, .cards {
         grid-template-columns: 1fr;
-        gap: 20px; 
+        gap: 20px;
     }
 
     .intro-grid {
-        margin: 54px;
+        margin: 54px auto;
     }
 
     .section-heading {
