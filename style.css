@@ -21,6 +21,7 @@ body {
 .header {
     position: sticky;
     top: 0;
+    z-index: 1;
     background: var(--bleu-petrol);
 }
 
@@ -70,6 +71,7 @@ body {
 /*PAGE D'ACCUEIL*/
 .hero {
     background: url('image/fond mur_bloc.jpg') center 50% / cover;
+    
 }
 
 .hero-content {
@@ -186,7 +188,6 @@ body {
 }
 
 .page-intro h1 {
-    margin: 0;
     color: var(--bleu-petrol);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(30px, 7vw, 100px);
@@ -231,38 +232,45 @@ body {
     background: #d5d9d7;
 }
 
+
 /*ÉQUIPEMENTS*/
 .equipment-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
 .equipment-card {
+    position: relative;
     overflow: hidden;
-    background: var(--gris-perle);
-    box-shadow: var(--shadow);
 }
 
 .equipment-card img {
-    width: 80%;
-    height: clamp(180px, 25vw, 300px);
+    width: 100%;
+    height: 350px;
     object-fit: cover;
 }
 
-.equipment-card div {
-    padding: 25px;
+.equipment-card:hover img {
+    filter: blur(5px);
 }
 
-.equipment-card h2 {
-    margin: 0 0 10px;
-    color: var(--vert-canard);
-    font-size: clamp(22px, 3vw, 30px);
+.equipment-description {
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    opacity: 0;
+    transition: .5s ease;
+    color: var(--gris-perle);
+    background: rgba(14, 41, 49, .35); /*chatGPT*/
 }
 
-.equipment-card p {
-    margin: 0;
+.equipment-card:hover .equipment-description {
+    opacity: 1;
 }
+
 
 /*TECHNIQUES*/
 .tech-grid {
