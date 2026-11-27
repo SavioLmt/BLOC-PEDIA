@@ -70,15 +70,14 @@ body {
 
 /*PAGE D'ACCUEIL*/
 .hero {
-    background: url('image/fond mur_bloc.jpg') center 50% / cover;
-    
+    background: url('image/fond mur_bloc.jpg') center 50% / cover ;
 }
 
 .hero-content {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    padding: clamp(25px, 6vw, 80px) 0;
+    padding: clamp(25px, 6vw, 80px);
 }
 
 .en-tete {
@@ -96,14 +95,15 @@ body {
     font-size: clamp(15px, 2vw, 20px);
     height: auto;
     display: inline-block;
+    color: var(--turquoise);
 }
 
 .button {
     display: inline-block;
     padding: 20px;
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--bleu-petrol);
     color: var(--gris-perle);
-    background: var(--turquoise);
+    background: var(--bleu-petrol);
     text-decoration: none;
     transition: .5s;
 }
@@ -264,7 +264,7 @@ body {
     opacity: 0;
     transition: .5s ease;
     color: var(--gris-perle);
-    background: rgba(14, 41, 49, .35); /*chatGPT*/
+    background: var(--shadow .35);
 }
 
 .equipment-card:hover .equipment-description {
